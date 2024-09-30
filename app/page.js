@@ -1,6 +1,7 @@
 "use client"
 import { Button } from "@/components/ui/button"
 import Link from 'next/link';
+import Image from 'next/image';
 import Typed from "typed.js";
 import React, { useEffect, useRef } from "react";
 
@@ -81,10 +82,12 @@ return (
     <div className="w-full lg:w-1/2 mt-8 lg:mt-0 flex justify-center">
       <picture>
         <source srcSet="https://tecdn.b-cdn.net/img/homepage/main.webp" type="image/webp" />
-        <img
+        <Image
           src="https://tecdn.b-cdn.net/img/homepage/main.png"
           className="w-full max-w-md lg:max-w-full"
           alt="Main components preview"
+          width={500}
+          height={500}
         />
       </picture>
     </div>
@@ -168,10 +171,12 @@ return (
         key={index}
         className="group  p-8 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-3 hover:scale-105"
       >
-        <img
+        <Image
           src={testimonial.image}
           alt={`${testimonial.name}'s photo`}
           className="mx-auto mb-4 rounded-full w-24 h-24 object-cover"
+          width={96}
+          height={96}
         />
         <h3 className="text-xl font-semibold  mb-2">
           {testimonial.name}
@@ -200,10 +205,12 @@ return (
               key={index}
               className="group p-6 rounded-lg shadow-lg transition-transform transform hover:-translate-y-3 hover:scale-105"
             >
-              <img
+              <Image
                 src={blog.image}
                 alt={blog.title}
                 className="w-full h-40 object-cover rounded-md mb-4"
+                width={430}
+                height={230}
               />
               <h3 className="text-xl font-bold  mb-2">
                 {blog.title}

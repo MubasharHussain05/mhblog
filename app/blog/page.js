@@ -1,7 +1,7 @@
-
 import { Button } from "@/components/ui/button"
 import blogs from '../../components/ApiData'
 import Link from "next/link";
+import Image from 'next/image';
 
 const Blog = () => {
     return (
@@ -11,7 +11,7 @@ const Blog = () => {
                 {
                 blogs.slice(0,19).map((blog, index) => (
                     <div key={index} className=" shadow-md rounded-lg overflow-hidden">
-                        <img src={blog.image} alt={blog.title} className="w-full h-48 object-cover" />
+                        <Image src={blog.image} alt={blog.title} className="w-full h-48 object-cover" width={500} height={200} />
                         <div className="p-4">
                             <h2 className="text-2xl font-bold mb-2">{blog.title}</h2>
                             <p className=" mb-2">By {blog.author}</p>
