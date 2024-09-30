@@ -1,5 +1,4 @@
-"use client"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import React, { useState } from 'react';
 
 const Contact = () => {
@@ -21,7 +20,7 @@ const Contact = () => {
     <main className="container mx-auto p-8">
       <section className="flex flex-col items-center justify-center space-y-6">
         {/* Contact Form */}
-        <div className="w-full md:w-7/12 p-6  shadow-lg rounded-lg transition-transform transform hover:scale-105 duration-300">
+        <div className="w-full md:w-7/12 p-6 shadow-lg rounded-lg transition-transform transform hover:scale-105 duration-300">
           <h3 className="text-xl mb-2">We'd be Happy to Hear from You</h3>
           <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
           <hr className="mb-6" />
@@ -58,7 +57,7 @@ const Contact = () => {
                   type="text"
                   id="lname-field"
                   name="lname"
-                  className="w-full mt-2 p-3 border  rounded-lg focus:outline-none focus:ring-2"
+                  className="w-full mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2"
                   value={formData.lname}
                   onChange={handleChange}
                   required
@@ -111,8 +110,7 @@ const Contact = () => {
               </div>
               {/* Submit Button */}
               <div>
-                
-                <Button className="flex justify-center items-center"  variant="outline" type="submit">Submit</Button>
+                <Button className="flex justify-center items-center" variant="outline" type="submit">Submit</Button>
               </div>
             </form>
           )}
